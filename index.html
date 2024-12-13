@@ -19,8 +19,8 @@
         <div class="nav-container">
             <div class="nav-left">
                 <div class="nav-brand">
-                    <i class="fas fa-book-open"></i>
-                    <span>Life Journey</span>
+                    <i class="fas fa-heart"></i>
+                    <span>Supinder Singh</span>
                 </div>
             </div>
             
@@ -42,16 +42,21 @@
                         <i class="fas fa-images"></i>
                         <span>Memories</span>
                     </a></li>
+                    <li><a href="login.html" class="nav-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Life Partner</span>
+                    </a></li>
                 </ul>
             </div>
             
             <div class="nav-right">
                 <button class="theme-toggle">
+                    <i class="fas fa-sun"></i>
                     <i class="fas fa-moon"></i>
                 </button>
-                <div class="nav-toggle" id="navToggle">
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
@@ -59,14 +64,14 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-image-grid">
-            <div class="hero-image" style="background-image: url('assets/images/hero1.jpg')"></div>
-            <div class="hero-image" style="background-image: url('assets/images/hero2.jpg')"></div>
-            <div class="hero-image" style="background-image: url('assets/images/hero3.jpg')"></div>
-            <div class="hero-image" style="background-image: url('assets/images/hero4.jpg')"></div>
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
         </div>
         <div class="hero-content">
             <div class="hero-text">
+                <div class="hero-badge">Welcome to my journey</div>
                 <h1>My Life Journey</h1>
                 <p>Exploring the moments that shaped who I am</p>
                 <div class="hero-buttons">
@@ -75,7 +80,13 @@
                 </div>
             </div>
             <div class="hero-featured-image">
-                <img src="assets/images/hero1.jpg" alt="Profile">
+                <div class="image-container">
+                    <img src="assets/images/hero1.jpg" alt="Profile">
+                    <div class="floating-card">
+                        <i class="fas fa-heart"></i>
+                        <span>Life is beautiful</span>
+                    </div>
+                </div>
                 <div class="image-decoration"></div>
             </div>
         </div>
@@ -87,71 +98,102 @@
             <h2 class="section-title">Life Timeline</h2>
             <p class="section-subtitle">A journey through the key moments that shaped my story</p>
         </div>
-        <div class="timeline">
-            <div class="timeline-item" data-year="2001">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">November 30, 2001</div>
-                    <div class="timeline-card">
+        <div class="timeline-container">
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-card-front">
+                        <div class="timeline-year">2001</div>
                         <div class="timeline-image">
                             <img src="assets/images/birth.jpg" alt="Birth">
                         </div>
                         <div class="timeline-info">
                             <h3>The Beginning</h3>
                             <p>A new journey begins in Kharar, Punjab. The start of a beautiful life story.</p>
+                            <span class="timeline-date">November 30, 2001</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="timeline-item" data-year="2004">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">September 2004</div>
-                    <div class="timeline-card">
-                        <div class="timeline-image">
-                            <img src="assets/images/school.jpg" alt="School">
-                        </div>
-                        <div class="timeline-info">
-                            <h3>School Days</h3>
-                            <p>Started middle school. Made lifelong friends and discovered my passion for learning.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="timeline-item" data-year="2020">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">June 2020</div>
-                    <div class="timeline-card">
-                        <div class="timeline-image">
-                            <img src="assets/images/college.jpg" alt="College">
-                        </div>
-                        <div class="timeline-info">
-                            <h3>College Life</h3>
-                            <p>Embarked on my college journey, studying Computer Science and making memories.</p>
+                    <div class="timeline-card-back">
+                        <h3>Life Begins</h3>
+                        <p>Born on November 30, 2001, in Kharar, Punjab. A moment that marked the beginning of a beautiful journey filled with love, laughter, and endless possibilities.</p>
+                        <div class="timeline-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Every great journey begins with a single moment."</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="timeline-item" data-year="2024">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">February 14, 2024</div>
-                    <div class="timeline-card">
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-card-front">
+                        <div class="timeline-year">2007</div>
                         <div class="timeline-image">
-                            <img src="assets/images/wedding.png" alt="Wedding">
+                            <img src="assets/images/school.jpg" alt="School Days">
                         </div>
                         <div class="timeline-info">
-                            <h3>Wedding Day</h3>
-                            <p>A beautiful celebration of love and commitment. Starting a new chapter of life with my soulmate, surrounded by family and friends. A day filled with joy, laughter, and endless promises.</p>
+                            <h3>School Days Begin</h3>
+                            <p>Started my educational journey at Sri Guru Harkrishan Public School, Kharar.</p>
+                            <span class="timeline-date">April 5, 2007</span>
+                        </div>
+                    </div>
+                    <div class="timeline-card-back">
+                        <h3>First Steps in Education</h3>
+                        <p>The start of my academic journey where I made my first friends and discovered my love for learning. These early years shaped my curiosity and passion for knowledge.</p>
+                        <div class="timeline-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"ਵਿੱਦਿਆ ਵੀਚਾਰੀ ਤਾਂ ਪਰਉਪਕਾਰੀ"</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-card-front">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-image">
+                            <img src="assets/images/college.jpg" alt="College Life">
+                        </div>
+                        <div class="timeline-info">
+                            <h3>College Journey</h3>
+                            <p>Began pursuing B.Tech in Computer Science at Chandigarh University.</p>
+                            <span class="timeline-date">September 15, 2020</span>
+                        </div>
+                    </div>
+                    <div class="timeline-card-back">
+                        <h3>Higher Education</h3>
+                        <p>A new chapter of learning and growth. Exploring the world of technology, making lifelong friends, and discovering my passion for programming.</p>
+                        <div class="timeline-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Education is not preparation for life; education is life itself."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-card-front">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-image">
+                            <img src="assets/images/wedding.png" alt="Wedding Day">
+                        </div>
+                        <div class="timeline-info">
+                            <h3>A New Beginning</h3>
+                            <p>The most beautiful day of my life - my wedding day.</p>
+                            <span class="timeline-date">February 14, 2024</span>
+                        </div>
+                    </div>
+                    <div class="timeline-card-back">
+                        <h3>Wedding Celebration</h3>
+                        <p>A celebration of love and commitment. Starting a new chapter of life with my soulmate, surrounded by family and friends. A day filled with joy, laughter, and endless promises.</p>
+                        <div class="timeline-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"ਦੋ ਦਿਲਾਂ ਦਾ ਮਿਲਣ, ਦੋ ਰੂਹਾਂ ਦਾ ਸਾਥ"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -162,24 +204,18 @@
             <p class="section-subtitle">The pillars of strength and love in my life</p>
         </div>
         <div class="family-slider-container">
-            <button class="slider-btn prev-btn" id="prevBtn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="slider-btn next-btn" id="nextBtn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
             <div class="family-slider">
-                <div class="family-grid">
-                    <div class="family-card">
+                <div class="family-track">
+                    <div class="family-card clone">
                         <div class="card-inner">
                             <div class="card-front">
-                                <img src="assets/images/father.jpg" alt="ਪਿਤਾ">
+                                <img src="https://via.placeholder.com/400x400?text=Father" alt="ਪਿਤਾ">
                                 <h3>Father</h3>
                             </div>
                             <div class="card-back">
                                 <div class="card-content">
                                     <h3>My Father</h3>
-                                    <p>ਮੇਰੇ ਰੋਲ ਮਾਡਲ ਅਤੇ ਮਾਰਗਦਰਸ਼ਕ। ਉਨ੍ਹਾਂ ਦੀ ਸਿਆਣਪ ਅਤੇ ਤਾਕਤ ਨੇ ਮੈਨੂੰ ਬਣਾਇਆ ਹੈ।</p>
+                                    <p>ਮੇਰੇ ਰੋਲ ਮਾਡਲ ਅਤੇ ਮਾਰਗਦਰਸ਼ਕ। ਉਨ੍ਹਾਂ ਦੀ ਸਿਆਣ ਅਤੇ ਤਾਕਤ ਨੇ ਮੈਨੂੰ ਬਣਾਇਆ ਹੈ।</p>
                                     <div class="card-quote">
                                         <i class="fas fa-quote-left"></i>
                                         <p>"ਚੁੱਪ-ਚਾਪ ਮਿਹਨਤ ਕਰੋ, ਸਫਲਤਾ ਖੁਦ ਬੋਲੇਗੀ।"</p>
@@ -192,7 +228,7 @@
                     <div class="family-card">
                         <div class="card-inner">
                             <div class="card-front">
-                                <img src="assets/images/mother.jpg" alt="ਮਾਤਾ">
+                                <img src="https://via.placeholder.com/400x400?text=Mother" alt="ਮਾਤਾ">
                                 <h3>Mother</h3>
                             </div>
                             <div class="card-back">
@@ -201,7 +237,7 @@
                                     <p>ਬੇਸ਼ਰਤ ਪਿਆਰ ਅਤੇ ਦੇਖਭਾਲ ਦੀ ਮੂਰਤ। ਉਨ੍ਹਾਂ ਦੀਆਂ ਕੁਰਬਾਨੀਆਂ ਅਤੇ ਸਮਰਪਣ ਹਰ ਰੋਜ਼ ਮੈਨੂੰ ਪ੍ਰੇਰਿਤ ਕਰਦੇ ਹਨ।</p>
                                     <div class="card-quote">
                                         <i class="fas fa-quote-left"></i>
-                                        <p>"ਪਿਆਰ ਹੀ ਜ਼ਿੰਦਗੀ ਦੀ ਨੀਂਹ ਹੈ।"</p>
+                                        <p>"ਪਿਆਰ ਹਰ ਜ਼ਿੰਦਗੀ ਦੀ ਨੀਂਹ ਹੈ।"</p>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +247,7 @@
                     <div class="family-card">
                         <div class="card-inner">
                             <div class="card-front">
-                                <img src="assets/images/wife.jpg" alt="ਪਤਨੀ">
+                                <img src="https://via.placeholder.com/400x400?text=Wife" alt="ਪਤਨੀ">
                                 <h3>Wife</h3>
                             </div>
                             <div class="card-back">
@@ -220,7 +256,7 @@
                                     <p>ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦੀ ਸਾਥਣ ਅਤੇ ਮੇਰੀ ਤਾਕਤ। ਉਸਦਾ ਪਿਆਰ ਅਤੇ ਸਮਝਦਾਰੀ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਨੂੰ ਪੂਰਨ ਬਣਾਉਂਦੀ ਹੈ।</p>
                                     <div class="card-quote">
                                         <i class="fas fa-quote-left"></i>
-                                        <p>"ਤੁਸੀਂ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦੀ ਸਭ ਤੋਂ ਖੂਬਸੂਰਤ ਦੁਆ ਦੋ।"</p>
+                                        <p>"ਤੁਸੀਂ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦੀ ਸਭ ਤੋਂ ਸ਼ੂਬਸਰਤ ਦੁਆ ਦੋ।"</p>
                                     </div>
                                 </div>
                             </div>
@@ -230,16 +266,16 @@
                     <div class="family-card">
                         <div class="card-inner">
                             <div class="card-front">
-                                <img src="assets/images/sister.jpg" alt="ਭੈਣ">
+                                <img src="https://via.placeholder.com/400x400?text=Sister" alt="ਭੈਣ">
                                 <h3>Sister</h3>
                             </div>
                             <div class="card-back">
                                 <div class="card-content">
                                     <h3>My Sister</h3>
-                                    <p>ਮੇਰੀ ਸਭ ਤੋਂ ਵਧੀਆ ਦੋਸਤ ਅਤੇ ਰਾਜ਼ਦਾਰ। ਇਕੱਠੇ ਵੱਡੇ ਹੋਣ ਨੇ ਸਾਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਯਾਦਾਂ ਦਿੱਤੀਆਂ ਹਨ।</p>
+                                    <p>ਮੇਰੀ ਸਭ ਤੋਂ ਵਧੀਆ ਦੋਤ ਅਤੇ ਰਾਜ਼ਦਾਰ। ਇਕੱਠੇ ਵੱਡੇ ਹੋਣ ਨੇ ਸਾਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਯਾਦਾਂ ਦਿੱਤੀਆਂ ਹਨ।</p>
                                     <div class="card-quote">
                                         <i class="fas fa-quote-left"></i>
-                                        <p>"ਖੂਨ ਦੇ ਰਿਸ਼ਤੇ ਨਾਲ ਭੈਣ, ਦਿਲ ਦੇ ਰਿਸ਼ਤੇ ਨਾਲ ਦੋਸਤ।"</p>
+                                        <p>"ਖੂਨ ਦੇ ਰਿਸ਼ਾਲੇ ਨਾਲ ਭੈਣ, ਦਿਲ ਦੇ ਰਿਸ਼ਤੇ ਨਾਲ ਦੋਸਤ"</p>
                                     </div>
                                 </div>
                             </div>
@@ -249,13 +285,13 @@
                     <div class="family-card">
                         <div class="card-inner">
                             <div class="card-front">
-                                <img src="assets/images/brother.jpg" alt="ਭਰਾ">
+                                <img src="https://via.placeholder.com/400x400?text=Brother" alt="ਭਰਾ">
                                 <h3>Brother</h3>
                             </div>
                             <div class="card-back">
                                 <div class="card-content">
                                     <h3>My Brother</h3>
-                                    <p>ਮੇਰਾ ਸਾਥੀ ਅਤੇ ਰੱਖਿਅਕ। ਉਸਦੀ ਮੌਜੂਦਗੀ ਜ਼ਿੰਦਗੀ ਨੂੰ ਹੋਰ ਵੀ ਰੋਮਾਂਚਕ ਅਤੇ ਮਜ਼ੇਦਾਰ ਬਣਾਉਂਦੀ ਹੈ।</p>
+                                    <p>ਮੇਰਾ ਸਾਥੀ ਅਤੇ ਰੱਖਿਅਕ। ਉਸਦੀ ਮੌਜੂਦਗੀ ਜਿੰਦਗੀ ਨੂੰ ਹੋਰ ਵੀ ਰੋਮਾਂਚਕ ਅਤੇ ਮਜ਼ੇਦਾਰ ਬਣਾਉਂਦੀ ਹੈ।</p>
                                     <div class="card-quote">
                                         <i class="fas fa-quote-left"></i>
                                         <p>"ਖੂਨ ਨਾਲ ਜੁੜੇ, ਦਿਲ ਨਾਲ ਜੁੜੇ।"</p>
@@ -265,15 +301,102 @@
                         </div>
                     </div>
                     
+                    <div class="family-card clone">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://via.placeholder.com/400x400?text=Father" alt="ਪਿਤਾ">
+                                <h3>Father</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-content">
+                                    <h3>My Father</h3>
+                                    <p>ਮੇਰੇ ਰੋਲ ਮਾਡਲ ਅਤੇ ਮਾਰਗਦਰਸ਼ਕ। ਉਨ੍ਹਾਂ ਦੀ ਸਿਆਣ ਅਤੇ ਤਾਕਤ ਨੇ ਮੈਨੂੰ ਬਣਾਇਆ ਹੈ।</p>
+                                    <div class="card-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>"ਚੁੱਪ-ਚਾਪ ਮਿਹਨਤ ਕਰੋ, ਸਫਲਤਾ ਖੁਦ ਬੋਲੇਗੀ।"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="family-card clone">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://via.placeholder.com/400x400?text=Mother" alt="ਮਾਤਾ">
+                                <h3>Mother</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-content">
+                                    <h3>My Mother</h3>
+                                    <p>ਬੇਸ਼ਰਤ ਪਿਆਰ ਅਤੇ ਦੇਖਭਾਲ ਦੀ ਮੂਰਤ। ਉਨ੍ਹਾਂ ਦੀਆਂ ਕੁਰਬਾਨੀਆਂ ਅਤੇ ਸਮਰਪਣ ਹਰ ਰੋਜ਼ ਮੈਨੂੰ ਪ੍ਰੇਰਿਤ ਕਰਦੇ ਹਨ।</p>
+                                    <div class="card-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>"ਪਿਆਰ ਹਰ ਜ਼ਿੰਦਗੀ ਦੀ ਨੀਂਹ ਹੈ।"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="family-card clone">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://via.placeholder.com/400x400?text=Wife" alt="ਪਤਨੀ">
+                                <h3>Wife</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-content">
+                                    <h3>My Wife</h3>
+                                    <p>ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦੀ ਸਾਥਣ ਅਤੇ ਮੇਰੀ ਤਾਕਤ। ਉਸਦਾ ਪਿਆਰ ਅਤੇ ਸਮਝਦਾਰੀ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਨੂੰ ਪੂਰਨ ਬਣਾਉਂਦੀ ਹੈ।</p>
+                                    <div class="card-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>"ਤੁਸੀਂ ਮੇਰੀ ਜ਼ਿੰਦਗੀ ਦੀ ਸਭ ਤੋਂ ਸ਼ੂਬਸਰਤ ਦੁਆ ਦੋ।"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="family-card clone">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://via.placeholder.com/400x400?text=Sister" alt="ਭੈਣ">
+                                <h3>Sister</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-content">
+                                    <h3>My Sister</h3>
+                                    <p>ਮੇਰੀ ਸਭ ਤੋਂ ਵਧੀਆ ਦੋਤ ਅਤੇ ਰਾਜ਼ਦਾਰ। ਇਕੱਠੇ ਵੱਡੇ ਹੋਣ ਨੇ ਸਾਨੂੰ ਬਹੁਤ ਸਾਰੀਆਂ ਯਾਦਾਂ ਦਿੱਤੀਆਂ ਹਨ।</p>
+                                    <div class="card-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>"ਖੂਨ ਦੇ ਰਿਸ਼ਾਲੇ ਨਾਲ ਭੈਣ, ਦਿਲ ਦੇ ਰਿਸ਼ਤੇ ਨਾਲ ਦੋਸਤ"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="family-card clone">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://via.placeholder.com/400x400?text=Brother" alt="ਭਰਾ">
+                                <h3>Brother</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-content">
+                                    <h3>My Brother</h3>
+                                    <p>ਮੇਰਾ ਸਾਥੀ ਅਤੇ ਰੱਖਿਅਕ। ਉਸਦੀ ਮੌਜੂਦਗੀ ਜਿੰਦਗੀ ਨੂੰ ਹੋਰ ਵੀ ਰੋਮਾਂਚਕ ਅਤੇ ਮਜ਼ੇਦਾਰ ਬਣਾਉਂਦੀ ਹੈ।</p>
+                                    <div class="card-quote">
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>"ਖੂਨ ਨਾਲ ਜੁੜੇ, ਦਿਲ ਨਾਲ ਜੁੜੇ।"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-            </div>
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
             </div>
         </div>
     </section>
@@ -303,19 +426,11 @@
                     <span>Travel</span>
                 </button>
             </div>
+
             <div class="memories-grid">
-                <div class="memory-item" data-category="family">
-                    <img src="assets/images/hero1.jpg" alt="Family Gathering">
-                    <div class="memory-overlay">
-                        <div class="memory-content">
-                            <h3>Family Gathering</h3>
-                            <p>A beautiful evening with loved ones</p>
-                            <span class="memory-date">June 2023</span>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="memory-item" data-category="events">
-                    <img src="assets/images/hero2.jpg" alt="Birthday Celebration">
+                    <img src="assets/images/birth.jpg" alt="Birthday Celebration">
                     <div class="memory-overlay">
                         <div class="memory-content">
                             <h3>Birthday Celebration</h3>
@@ -324,16 +439,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="memory-item" data-category="travel">
-                    <img src="assets/images/hero3.jpg" alt="Beach Vacation">
+
+
+                <div class="memory-item" data-category="family">
+                    <img src="assets/images/family.jpg" alt="Family Gathering">
                     <div class="memory-overlay">
                         <div class="memory-content">
-                            <h3>Beach Vacation</h3>
-                            <p>Sun, sand, and endless smiles</p>
-                            <span class="memory-date">July 2023</span>
+                            <h3>Family Gathering</h3>
+                            <p>A beautiful evening with loved ones</p>
+                            <span class="memory-date">June 2023</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="memory-item" data-category="family">
                     <img src="assets/images/hero4.jpg" alt="Family Dinner">
                     <div class="memory-overlay">
@@ -349,59 +467,55 @@
         </div>
     </section>
 
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">Photo Gallery</h2>
+            <p class="section-subtitle">A collection of precious moments and memories</p>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <img src="https://via.placeholder.com/800x600?text=Memory+1" alt="Family Picnic">
+                </div>
+                
+                <div class="masonry-item">
+                    <img src="https://via.placeholder.com/600x800?text=Memory+2" alt="Birthday">
+                </div>
+                
+                <div class="masonry-item">
+                    <img src="https://via.placeholder.com/800x500?text=Memory+3" alt="College Days">
+                </div>
+                
+                <div class="masonry-item">
+                    <img src="https://via.placeholder.com/600x600?text=Memory+4" alt="Wedding">
+                </div>
+                
+                <div class="masonry-item">
+                    <img src="https://via.placeholder.com/800x800?text=Memory+5" alt="Travel">
+                </div>
+                
+                <div class="masonry-item">
+                    <img src="https://via.placeholder.com/600x700?text=Memory+6" alt="Friends">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-brand">
-                    <i class="fas fa-book-open"></i>
-                    <span>Life Journey</span>
-                </div>
-                <p class="footer-description">Documenting life's beautiful moments and cherishing the memories that make us who we are.</p>
-                <div class="social-links">
-                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#family">Family</a></li>
-                    <li><a href="#memories">Memories</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul class="footer-contact">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:contact@lifejourney.com">contact@lifejourney.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <span>+91 123-456-7890</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Kharar, Punjab, India</span>
-                    </li>
-                </ul>
-            </div>
+        <div class="footer-brand">
+            <i class="fas fa-heart"></i>
+            <span>Life Journey</span>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Life Journey. All rights reserved.</p>
-            <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <span class="separator">|</span>
-                <a href="#">Terms of Service</a>
-            </div>
+        <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
         </div>
+        <p class="copyright">Made with <i class="fas fa-heart"></i> in Punjab</p>
     </footer>
 
     <script src="js/main.js"></script>

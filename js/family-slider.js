@@ -1,93 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.family-grid');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dots = document.querySelectorAll('.dot');
+    const track = document.querySelector('.family-track');
+    const cards = document.querySelectorAll('.family-card:not(.clone)');
     
-    let currentSlide = 0;
-    const slidesCount = dots.length;
+    // Calculate total width for animation
+    function updateTrackAnimation() {
+        const cardWidth = cards[0].offsetWidth;
+        const totalWidth = cardWidth * cards.length;
+        track.style.setProperty('--slide-width', `-${totalWidth}px`);
+    }
     
-    function updateSlider() {
-        // Calculate the translation based on current slide
-        const translation = currentSlide * -20;
-        slider.style.transform = `translateX(${translation}%)`;
-        
-        // Update dots
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
+    // Clone cards for infinite loop
+    function setupInfiniteLoop() {
+        // Clone all cards and add them to the end
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add('clone');
+            track.appendChild(clone);
         });
-        
-        // Update button states
-        prevBtn.style.opacity = currentSlide === 0 ? '0.5' : '1';
-        nextBtn.style.opacity = currentSlide === slidesCount - 1 ? '0.5' : '1';
     }
     
-    function nextSlide() {
-        if (currentSlide < slidesCount - 1) {
-            currentSlide++;
-            updateSlider();
-        }
-    }
+    setupInfiniteLoop();
+    updateTrackAnimation();
     
-    function prevSlide() {
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateSlider();
-        }
-    }
-    
-    // Event Listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    
-    // Dot navigation
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentSlide = index;
-            updateSlider();
-        });
+    // Reset position when animation ends
+    track.addEventListener('animationend', () => {
+        track.style.animation = 'none';
+        track.offsetHeight; // Trigger reflow
+        track.style.animation = 'slideTrack 60s linear infinite';
     });
     
-    // Touch events for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    slider.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    slider.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartX - touchEndX;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        }
-    }
-    
-    // Auto slide (optional)
-    const autoSlideInterval = 5000; // 5 seconds
-    let autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
-    
-    // Pause auto-slide on hover
-    const sliderContainer = document.querySelector('.family-slider-container');
-    sliderContainer.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideTimer);
-    });
-    
-    sliderContainer.addEventListener('mouseleave', () => {
-        autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
-    });
-    
-    // Initial setup
-    updateSlider();
+    // Update animation on window resize
+    window.addEventListener('resize', updateTrackAnimation);
 }); 

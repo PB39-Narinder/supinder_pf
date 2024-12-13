@@ -1,33 +1,23 @@
-const themeToggle = document.querySelector('.theme-toggle');
-const root = document.documentElement;
-
-const themes = {
-    light: {
-        '--primary-color': '#4a90e2',
-        '--text-color': '#333',
-        '--bg-color': '#fff'
-    },
-    dark: {
-        '--primary-color': '#2980b9',
-        '--text-color': '#fff',
-        '--bg-color': '#222'
-    }
-};
-
-let currentTheme = 'light';
-
-themeToggle.addEventListener('click', () => {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(currentTheme);
-});
-
-function setTheme(theme) {
-    const selectedTheme = themes[theme];
-    Object.keys(selectedTheme).forEach(property => {
-        root.style.setProperty(property, selectedTheme[property]);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
     
-    // Update icon
-    const icon = themeToggle.querySelector('i');
-    icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-} 
+    // Check if user has a theme preference
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    } else {
+        // Check system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        let newTheme = theme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}); 

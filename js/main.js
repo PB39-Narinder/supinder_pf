@@ -1,9 +1,41 @@
-// Navigation Toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navMiddle = document.querySelector('.nav-middle');
+    const body = document.body;
 
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navToggle.classList.toggle('active');
+        navMiddle.classList.toggle('active');
+        body.classList.toggle('menu-open');
+        
+        // Toggle aria-expanded for accessibility
+        const isExpanded = navMiddle.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMiddle.classList.contains('active') && 
+            !navMiddle.contains(e.target) && 
+            !navToggle.contains(e.target)) {
+            navToggle.classList.remove('active');
+            navMiddle.classList.remove('active');
+            body.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', false);
+        }
+    });
+
+    // Close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMiddle.classList.remove('active');
+            body.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', false);
+        });
+    });
 });
 
 // Smooth Scrolling

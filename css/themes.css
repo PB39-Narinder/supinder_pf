@@ -1,0 +1,27 @@
+:root {
+  /* Loving Theme */
+  --primary-color: #ff6b6b;     /* Soft Red */
+  --secondary-color: #ff8e8e;   /* Light Pink */
+  --accent-color: #ffd3d3;      /* Baby Pink */
+  --text-color: #4a4a4a;        /* Soft Black */
+  --bg-color: #fff9f9;          /* Warm White */
+  --section-bg: #fff0f0;        /* Light Pink Background */
+  --card-bg: #ffffff;           /* Pure White */
+  --gradient-start: #ff6b6b;    /* Soft Red */
+  --gradient-end: #ff8e8e;      /* Light Pink */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 4px 20px rgba(255, 107, 107, 0.1);
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  --primary-color: #ff8e8e;     /* Light Pink */
+  --secondary-color: #ff6b6b;   /* Soft Red */
+  --accent-color: #ffa5a5;      /* Warm Pink */
+  --text-color: #e5e5e5;        /* Light Gray */
+  --bg-color: #2d2323;          /* Warm Dark Background */
+  --section-bg: #332828;        /* Slightly Lighter Warm Dark */
+  --card-bg: #3d2f2f;           /* Warm Card Background */
+  --gradient-start: #ff6b6b;    /* Soft Red */
+  --gradient-end: #cc5656;      /* Darker Pink */
+} 

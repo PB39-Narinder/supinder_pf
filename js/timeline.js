@@ -1,6 +1,6 @@
 // Timeline animations
 document.addEventListener('DOMContentLoaded', () => {
-    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineCards = document.querySelectorAll('.timeline-card');
     
     const options = {
         threshold: 0.2,
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, options);
 
-    timelineItems.forEach(item => {
-        timelineObserver.observe(item);
+    timelineCards.forEach(card => {
+        timelineObserver.observe(card);
     });
 }); 

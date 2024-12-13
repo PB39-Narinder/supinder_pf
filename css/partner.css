@@ -1,0 +1,329 @@
+/* Partner Page Styles */
+.partner-hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(at 40% 20%, rgba(255,255,255,0.1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, rgba(255,255,255,0.1) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, rgba(255,255,255,0.1) 0px, transparent 50%);
+    opacity: 0.6;
+}
+
+.partner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.partner-text {
+    flex: 1;
+}
+
+.partner-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.partner-text h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.partner-image {
+    position: relative;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.partner-image img {
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.partner-quote {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+    max-width: 300px;
+}
+
+.partner-quote i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Journey Section */
+.journey-section {
+    padding: 8rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.journey-grid {
+    max-width: 1200px;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.journey-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.journey-card:hover {
+    transform: translateY(-10px);
+}
+
+.journey-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.journey-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.journey-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Moments Section */
+.moments {
+    padding: 8rem 2rem;
+    background-color: var(--section-bg);
+}
+
+.moments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.moment-large {
+    margin-bottom: 2rem;
+}
+
+.moment-large .moment-card {
+    height: 500px;
+}
+
+.moment-large .moment-content {
+    padding: 3rem;
+}
+
+.moment-large h3 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.moment-large p {
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+.moments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.moment-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.moment-card:hover {
+    transform: translateY(-10px);
+}
+
+.moment-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.moment-content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.moment-date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.moment-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.moment-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .partner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .partner-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .partner-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .partner-quote {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 2rem;
+    }
+
+    .journey-section {
+        padding: 4rem 1rem;
+    }
+
+    .journey-card {
+        padding: 1.5rem;
+    }
+
+    .moments {
+        padding: 4rem 1rem;
+    }
+
+    .moment-large .moment-card {
+        height: 400px;
+    }
+
+    .moment-large h3 {
+        font-size: 2rem;
+    }
+
+    .moment-card {
+        height: 250px;
+    }
+} 
+
+/* Logout Button */
+.logout-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.logout-btn:hover {
+    transform: scale(1.1);
+    background: var(--secondary-color);
+} 
+
+/* Footer Styles */
+.footer-text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.footer-text i {
+    color: #ff6b6b;
+    animation: pulse 1.5s infinite;
+} 
+
+/* Navigation Styles Override */
+.nav-link {
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-brand {
+    text-decoration: none;
+}
+
+.nav-link::after {
+    display: none;
+} 
