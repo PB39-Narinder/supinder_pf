@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Predefined credentials (in real app, this would be server-side)
     const CREDENTIALS = {
         username: '27/11/2024', // Wedding date
-        password: 'priyanka'    // Secret word
+        password: 'Supinder & Priyanka ❤'    // Secret word
     };
 
     // Toggle password visibility
@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle login
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const username = document.getElementById('username').value;
+        const dateInput = document.getElementById('username').value;
+        // Convert YYYY-MM-DD to DD/MM/YYYY format
+        const dateParts = dateInput.split('-');
+        const username = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
         const password = document.getElementById('password').value;
 
         if (username === CREDENTIALS.username && password === CREDENTIALS.password) {
